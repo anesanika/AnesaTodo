@@ -91,7 +91,7 @@ const Tasktable = () => {
               }
             />
             <button
-              className="bg-[#4CD964] text-white p-2 rounded-md text-[1.5rem]"
+              className="bg-[#4CD964] text-white p-2 rounded-md text-[1.5rem] hover:scale-110 transition-transform active:scale-90"
               type="submit"
             >
               <IoAddOutline />

@@ -21,7 +21,7 @@ const Actionbtn = ({ text, bg = "#00CA4E", action }: any) => {
   return (
     <motion.button
       onClick={action}
-      className="p-2 rounded-full transition-all duration-300 overflow-hidden sm:p-1"
+      className="p-2 rounded-full transition-all duration-300 overflow-hidden max-sm:p-1"
       style={{ backgroundColor: bg }}
       variants={{
         hovered: { width: 60, scale: 1.2 },
