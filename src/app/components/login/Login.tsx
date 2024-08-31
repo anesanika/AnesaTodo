@@ -46,7 +46,7 @@ const Login = () => {
       <div className="flex items-center justify-center p-12 max-md:p-1 w-full">
         <div className="mx-auto w-full max-w-[550px] bg-white">
           <form className="py-6 px-9" onSubmit={handleSubmit}>
-            <h2 className="text-center text-2xl font-semibold text-[#07074D] mb-8">
+            <h2 className="text-center text-5xl font-semibold text-[#07074D] mb-8">
               Login
             </h2>
             {error ? (
