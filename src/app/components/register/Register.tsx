@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/todo/register/",
+        "https://anesa06.pythonanywhere.com/todo/register/",
         {
           username,
           password,

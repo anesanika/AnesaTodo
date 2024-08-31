@@ -24,7 +24,7 @@ const Tasktable = () => {
     const getAllTask = async () => {
       try {
         const response = await axios.get(
-          `http://127.0.0.1:8000/todo/list/tasks/?user=${user?.id}`,
+          `https://anesa06.pythonanywhere.com/todo/list/tasks/?user=${user?.id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("access")}`,
@@ -44,7 +44,7 @@ const Tasktable = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        `http://127.0.0.1:8000/todo/list/tasks/`,
+        `https://anesa06.pythonanywhere.com/todo/list/tasks/`,
         {
           user: user?.id,
           title,

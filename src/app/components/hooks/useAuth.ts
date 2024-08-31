@@ -17,11 +17,14 @@ export const useAuth = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await axios.get("http://127.0.0.1:8000/todo/me/", {
-          headers: {
-            Authorization: `Bearer ${localStorage.getItem("access")}`,
-          },
-        });
+        const response = await axios.get(
+          "https://anesa06.pythonanywhere.com/todo/me/",
+          {
+            headers: {
+              Authorization: `Bearer ${localStorage.getItem("access")}`,
+            },
+          }
+        );
         setUser(response.data);
       } catch (e) {
         console.log("You Are Unauthorized");

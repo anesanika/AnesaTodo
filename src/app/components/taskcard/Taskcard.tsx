@@ -35,7 +35,7 @@ const Taskcard: React.FC<TaskcardProps> = ({
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `http://127.0.0.1:8000/todo/list/tasks/${id}/`,
+        `https://anesa06.pythonanywhere.com/todo/list/tasks/${id}/`,
         {
           headers: {
             user: user.id,
@@ -57,7 +57,7 @@ const Taskcard: React.FC<TaskcardProps> = ({
   const saveEdit = async () => {
     try {
       const response = await axios.put(
-        `http://127.0.0.1:8000/todo/list/tasks/${id}/`,
+        `https://anesa06.pythonanywhere.com/todo/list/tasks/${id}/`,
         {
           title: titleValue,
           user: user.id,
