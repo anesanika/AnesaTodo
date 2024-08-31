@@ -14,7 +14,7 @@
 
 .scroll-style::-webkit-scrollbar {
   width: 3px;
-  background-color: #b7c1ff;
+  background-color: transparent;
 }
 .scroll-style::-webkit-scrollbar-thumb {
   background-color: #7789fd;

@@ -16,17 +16,15 @@ const floatAnimation = {
 const Bg = () => {
   return (
     <div className="w-full h-full bg-neutral-50 shadow-lg rounded-lg absolute top-0 left-0 -z-50 overflow-hidden font-title">
-      {/* Top Left Solid Color Shape */}
       <motion.div
-        className="absolute w-[300px] h-[300px] bg-[#6A64F1] rounded-full top-[-60px] left-[-60px]"
+        className="absolute w-[300px] h-[300px] bg-[#6A64F1] rounded-full top-[-60px] left-[-60px] max-md:w-[150px] max-md:h-[150px]"
         variants={floatAnimation}
         initial="initial"
         animate="animate"
       ></motion.div>
 
-      {/* Bottom Right Outline Shape */}
       <motion.div
-        className="absolute w-[350px] h-[350px] border-2 border-[#6A64F1] rounded-md bottom-[-70px] right-[-70px]"
+        className="absolute w-[350px] h-[350px] border-2 border-[#6A64F1] rounded-md bottom-[-70px] right-[-70px]  max-md:w-[150px] max-md:h-[150px]"
         variants={floatAnimation}
         initial="initial"
         animate="animate"

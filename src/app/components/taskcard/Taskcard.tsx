@@ -103,13 +103,13 @@ const Taskcard: React.FC<TaskcardProps> = ({
                   type="text"
                   value={titleValue}
                   onChange={(e) => setTitle(e.target.value)}
-                  className="border-b border-purple-300 text-[18px] focus:border-purple-700 transition-colors duration-200 outline-none font-[SfBold] w-[40%] min-w-[125px]"
+                  className="border-b border-purple-300 text-[18px]  max-sm:text-[11px] focus:border-purple-700 transition-colors duration-200 outline-none font-[SfBold] w-[40%] min-w-[70px]"
                 />
                 <Actionbtn text="Save" action={saveEdit} />
               </div>
             ) : (
               <h1
-                className="font-[SfBold] text-[18px]"
+                className="font-[SfBold] text-[18px] max-sm:text-[11px]"
                 style={
                   checked
                     ? { textDecoration: "line-through", fontStyle: "italic" }
@@ -120,7 +120,7 @@ const Taskcard: React.FC<TaskcardProps> = ({
               </h1>
             )}
           </div>
-          <div className="text-neutral-500 mr-4 text-[10px] text-[Sf]">
+          <div className="text-neutral-500 mr-4 text-[10px] text-[Sf] max-sm:text-[7px]">
             {date}
           </div>
           <div className="flex justify-center items-center gap-2">

@@ -21,7 +21,7 @@ const Actionbtn = ({ text, bg = "#00CA4E", action }: any) => {
   return (
     <motion.button
       onClick={action}
-      className="p-2 rounded-full transition-all duration-300 overflow-hidden"
+      className="p-2 rounded-full transition-all duration-300 overflow-hidden sm:p-1"
       style={{ backgroundColor: bg }}
       variants={{
         hovered: { width: 60, scale: 1.2 },
@@ -34,7 +34,7 @@ const Actionbtn = ({ text, bg = "#00CA4E", action }: any) => {
       onMouseLeave={handleMouseLeave}
     >
       <motion.p
-        className="text-white font-[Sf] text-[12px] absolute"
+        className="text-white font-[Sf] text-[12px] max-sm:text-[9px] absolute"
         style={{
           top: "50%",
           left: "50%",

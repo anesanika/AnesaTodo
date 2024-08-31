@@ -12,6 +12,7 @@ const Login = () => {
   const [password, setPassword] = useState<string>("");
   const { user, redirectIfAuthenticated } = useAuth();
   const [error, setError] = useState<any>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     redirectIfAuthenticated(`/user/${user?.username}`);
@@ -19,6 +20,7 @@ const Login = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
     try {
       const response = await axios.post(
         "https://anesa06.pythonanywhere.com/todo/login/",
@@ -32,7 +34,9 @@ const Login = () => {
       localStorage.setItem("refresh", data.refresh);
 
       router.push(`/user/${username}`);
+      setLoading(false);
     } catch (e: any) {
+      setLoading(false);
       console.error(e);
       setError(e.response.data);
     }
@@ -44,9 +48,9 @@ const Login = () => {
     <main className="w-full h-screen flex justify-center items-center">
       <Bg />
       <div className="flex items-center justify-center p-12 max-md:p-1 w-full">
-        <div className="mx-auto w-full max-w-[550px] bg-white">
+        <div className="mx-auto w-full max-w-[550px] bg-white rounded-md">
           <form className="py-6 px-9" onSubmit={handleSubmit}>
-            <h2 className="text-center text-5xl font-semibold text-[#07074D] mb-8">
+            <h2 className="text-center text-5xl max-md:text-2xl font-semibold text-[#07074D] mb-8">
               Login
             </h2>
             {error ? (
@@ -101,7 +105,13 @@ const Login = () => {
                 type="submit"
                 className="hover:shadow-form w-full rounded-md bg-[#6A64F1] py-3 px-8 text-center text-base font-semibold text-white outline-none"
               >
-                Login
+                {!loading ? (
+                  "Login"
+                ) : (
+                  <div className="flex items-center justify-center h-[10px]">
+                    <div className="loading-icon animate-spin rounded-full h-4 w-4 border-t-2 border-l-2"></div>
+                  </div>
+                )}
               </button>
             </div>
             <Link
