@@ -59,7 +59,7 @@ const Me = () => {
             </h1>
             <div>
               <p className="text-[15px] text-[#00000056] -translate-y-20 -rotate-6">
-                'Your Day, Organized Your Way'
+                Your Day, Organized Your Way
               </p>
             </div>
             <button

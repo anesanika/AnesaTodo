@@ -5,17 +5,18 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 const animationVariantsLeft = {
-  hidden: { opacity: 0, x: -500 }, // Starts off-screen to the left
-  visible: { opacity: 1, x: 0 }, // Moves to the center
+  hidden: { opacity: 0, x: -500 },
+  visible: { opacity: 1, x: 0 },
 };
 
 const animationVariantsRight = {
-  hidden: { opacity: 0, x: 500 }, // Starts off-screen to the right
-  visible: { opacity: 1, x: 0 }, // Moves to the center
+  hidden: { opacity: 0, x: 500 },
+  visible: { opacity: 1, x: 0 },
 };
 
 const Opening = () => {
   const router = useRouter();
+
   useEffect(() => {
     setTimeout(() => {
       router.push(`/login`);
